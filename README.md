@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/basic-solution-using-css-flexbox-c0IpEoMpgD)
-- Live Site URL: [Live Site](https://deepanshu-kaushik.github.io/QR-Code-Project/)
+- Live Site URL: [Live Site](https://deepanshu-kaushik.github.io/faq-accordion-main/)
 
 ## My process
 
