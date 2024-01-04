@@ -8,9 +8,9 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="assets/images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="src/style.css" />
 
     <title>Frontend Mentor | FAQ accordion</title>
     <style>
@@ -23,6 +23,14 @@
       }
       * {
         font-family: "Work Sans", sans-serif;
+      }
+      body {
+        background: url(assets/images/background-pattern-desktop.svg);
+      }
+      @media screen and (max-width: 375px) {
+        body {
+          background: url(assets/images/background-pattern-mobile.svg);
+        }
       }
       .card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -55,7 +63,7 @@
     </style>
   </head>
   <body
-    class="bg-[url(/assets/images/background-pattern-desktop.svg)] bg-contain bg-no-repeat bg-[--Light_pink]"
+    class="bg-contain bg-no-repeat bg-[--Light_pink]"
   >
     <main class="w-full h-screen flex justify-center items-center">
       <div class="card bg-[--White] w-[600px] rounded-2xl p-10 m-10">
