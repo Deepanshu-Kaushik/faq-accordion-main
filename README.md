@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/basic-solution-using-css-flexbox-c0IpEoMpgD)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/faq-accordion-NZ_nqKq4FI)
 - Live Site URL: [Live Site](https://deepanshu-kaushik.github.io/faq-accordion-main/)
 
 ## My process
