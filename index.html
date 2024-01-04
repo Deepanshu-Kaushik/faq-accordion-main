@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <title>Frontend Mentor | FAQ accordion</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+      :root {
+        --White: hsl(0, 0%, 100%);
+        --Light_pink: hsl(275, 100%, 97%);
+        --Grayish_purple: hsl(292, 16%, 49%);
+        --Dark_purple: hsl(292, 42%, 14%);
+      }
+      * {
+        font-family: "Work Sans", sans-serif;
+      }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      .ques {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+      }
+      .ques > img {
+        cursor: pointer;
+      }
+      .question {
+        cursor: pointer;
+        color: var(--Dark_purple);
+        font-weight: 600;
+        margin-right: 50px;
+      }
+      .question:hover {
+        color: purple;
+      }
+      .answer {
+        color: var(--Grayish_purple);
+        font-weight: 400;
+        display: none;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[url(/assets/images/background-pattern-desktop.svg)] bg-contain bg-no-repeat bg-[--Light_pink]"
+  >
+    <main class="w-full h-screen flex justify-center items-center">
+      <div class="card bg-[--White] w-[600px] rounded-2xl p-10 m-10">
+        <div class="heading flex items-center">
+          <img class="w-10" src="assets/images/icon-star.svg" alt="star" />
+          <h1 class="ml-5 text-[--Dark_purple] text-6xl font-[700]">FAQs</h1>
+        </div>
+        <div class="accordion">
+          <div class="ques">
+            <div class="question">
+              What is Frontend Mentor, and how will it help me?
+            </div>
+            <img src="assets/images/icon-plus.svg" alt="plus or minus" />
+          </div>
+          <div class="answer">
+            Frontend Mentor offers realistic coding challenges to help
+            developers improve their frontend coding skills with projects in
+            HTML, CSS, and JavaScript. It's suitable for all levels and ideal
+            for portfolio building.
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="ques">
+            <div class="question">Is Frontend Mentor free?</div>
+            <img src="assets/images/icon-plus.svg" alt="plus or minus" />
+          </div>
+          <div class="answer">
+            Yes, Frontend Mentor offers both free and premium coding challenges,
+            with the free option providing access to a range of projects
+            suitable for all skill levels.
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="ques">
+            <div class="question">
+              Can I use Frontend Mentor projects in my portfolio?
+            </div>
+            <img src="assets/images/icon-plus.svg" alt="plus or minus" />
+          </div>
+          <div class="answer">
+            Yes, you can use projects completed on Frontend Mentor in your
+            portfolio. It's an excellent way to showcase your skills to
+            potential employers!
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="ques">
+            <div class="question">
+              How can I get help if I'm stuck on a Frontend Mentor challenge?
+            </div>
+            <img src="assets/images/icon-plus.svg" alt="plus or minus" />
+          </div>
+          <div class="answer">
+            The best place to get help is inside Frontend Mentor's Discord
+            community. There's a help channel where you can ask questions and
+            seek support from other community members.
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      let questions = document.querySelectorAll(".ques");
+      questions.forEach((ques) => {
+        ques.addEventListener("click", () => {
+          let answer = ques.nextElementSibling;
+          if (answer.style.display === "block") {
+            answer.style.display = "none";
+            ques.children[1].src = "assets/images/icon-plus.svg";
+          } else {
+            answer.style.display = "block";
+            ques.children[1].src = "assets/images/icon-minus.svg";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
